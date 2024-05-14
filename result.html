@@ -15,8 +15,8 @@
             <option value="gl">GL Model</option>
         </select><br><br>
         <label for="input_value">Enter input value (comma-separated):</label>
-        <input type="text" name="input_value" id="input_value" required><br><br>
-        <button type="submit" id="predict-button">Predict</button>
+        <input type="text" name="input_value" id="input_value" required pattern="[0-9]+(,[0-9]+)*"><br><br>
+        <button type="submit" id="predict-button">Get Prediction</button>
     </form>
 
     <div id="results">
@@ -31,12 +31,11 @@
             var xhr = new XMLHttpRequest(); // Create XMLHttpRequest object
 
             xhr.open("POST", "/predict", true); // Open a POST request to /predict
-
-            xhr.onloadstart = function () { 
+            xhr.onloadstart = function() {
+                // Display loading spinner or other visual indicator
                 document.getElementById("results").innerHTML = "Loading...";
             };
             xhr.onload = function () {
-
                 if (xhr.status === 200) {
                     // If request is successful, insert response into results div
                     document.getElementById("results").innerHTML = xhr.responseText;

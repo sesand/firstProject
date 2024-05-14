@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 
 # Determine the path where the models and CSV files will be located inside the Docker container
-MODEL_DIR = "/Intern/final_predict/"
-DATA_DIR = "/Intern/final_predict/"
+MODEL_DIR = "/Intern/"
+DATA_DIR = "/Intern/"
 
 # Load the saved models
 ca_model = load(os.path.join(MODEL_DIR, 'RandomForest_ModelCa.joblib'))

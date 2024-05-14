@@ -30,7 +30,7 @@ def predict_concentration(model, df, input_value):
 
 @app.route("/")
 def root():
-    with open(os.path.join(DATA_DIR, "result01.html")) as file:
+    with open(os.path.join(DATA_DIR, "result.html")) as file:
         return file.read()
 
 @app.route('/predict', methods=['POST'])

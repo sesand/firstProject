@@ -1,6 +1,4 @@
 # To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
-
-gunicorn==21.2.0
 joblib==1.4.2
 matplotlib==3.8.4
 numpy==1.26.4

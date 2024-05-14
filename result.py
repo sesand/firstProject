@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 
 # Determine the path where the models and CSV files will be located inside the Docker container
-MODEL_DIR = "/Intern/final_predict/"
-DATA_DIR = "/Intern/final_predict/"
+MODEL_DIR = "/Intern/"
+DATA_DIR = "/Intern/"
 
 # Load the saved models
 ca_model = load(os.path.join(MODEL_DIR, 'RandomForest_ModelCa.joblib'))
@@ -30,7 +30,7 @@ def predict_concentration(model, df, input_value):
 
 @app.route("/")
 def root():
-    with open(os.path.join(DATA_DIR, "result01.html")) as file:
+    with open(os.path.join(DATA_DIR, "result.html")) as file:
         return file.read()
 
 @app.route('/predict', methods=['POST'])
@@ -63,4 +63,4 @@ def predict():
         return f"Error: {str(e)}"
 
 if __name__ == '__main__':
-    app.run(port=5002, host='0.0.0.0', debug=False)
+    app.run(port=5000, host='0.0.0.0', debug=False)

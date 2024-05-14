@@ -5,8 +5,8 @@ import os
 
 app = Flask(__name__)
 
-MODEL_DIR ="/Intern/"
-DATA_DIR = "/Intern/"
+MODEL_DIR ="/Intern/final_predict/"
+DATA_DIR = "/Intern/final_predict/"
 
 # Load the saved models
 ca_model = load(os.path.join(MODEL_DIR,'RandomForest_ModelCa.joblib'))

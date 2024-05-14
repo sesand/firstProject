@@ -4,7 +4,7 @@ WORKDIR /Intern/
 
 # Install pip requirements
 COPY requirements02.txt /Intern/
-RUN pip install -r /requirements02.txt
+RUN pip install -r ./requirements01.txt
 
 # Copy Python script and other necessary files
 COPY result01.py /Intern/

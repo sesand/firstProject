@@ -4,7 +4,7 @@ WORKDIR /Intern/
 
 # Install pip requirements
 COPY /requirements01.txt ./
-RUN pip install -r /requirements02.txt
+RUN pip install -r /requirements01.txt
 
 RUN mkdir -p /Intern/
 

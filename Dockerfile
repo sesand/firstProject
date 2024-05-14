@@ -3,14 +3,13 @@ FROM python:3.10.14
 WORKDIR /Intern/
 
 # Install pip requirements
-COPY /requirements01.txt ./
-RUN pip install -r /requirements01.txt
+COPY requirements01.txt /Intern/
+RUN pip install -r ./requirements01.txt
 
-RUN mkdir -p /Intern/
 
 # Copy Python script and other necessary files
-COPY /result.py ./
-COPY /interpolatedca.csv /interpolatedgl.csv /interpolatedHb.csv /RandomForest_ModelCa.joblib /RandomForest_ModelGl.joblib /RandomForest_ModelHb.joblib /result.html ./
+COPY result.py /Intern/
+COPY interpolatedca.csv interpolatedgl.csv interpolatedHb.csv RandomForest_ModelCa.joblib RandomForest_ModelGl.joblib RandomForest_ModelHb.joblib result.html /Intern/
 
 EXPOSE 5000
 

@@ -9,7 +9,7 @@ RUN pip install -r /requirements02.txt
 RUN mkdir -p /Intern/
 
 # Copy Python script and other necessary files
-COPY /result01.py ./
+COPY /result.py ./
 COPY /interpolatedca.csv /interpolatedgl.csv /interpolatedHb.csv /RandomForest_ModelCa.joblib /RandomForest_ModelGl.joblib /RandomForest_ModelHb.joblib /result.html ./
 
 EXPOSE 5000
